@@ -34,3 +34,5 @@ hello!
 testing for what happens after action is merged
 
 test
+
+test membership
