@@ -1,0 +1,18 @@
+name: Membership Audit Log Action
+
+on: 
+  push:
+    branches:
+      - 'master' 
+jobs:
+  membership_action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: svanboxel/org-audit-action@master
+        with:
+          ## `organization` and `enterprise` are mutually exclusive
+          organization: 'sennatestorg'  
+          ## repo, read:org, read:enteprise (if running with enterprise option)
+          token: ${{ secrets.EverythingToken }}
+          ## issue is optional
+          issue: true
